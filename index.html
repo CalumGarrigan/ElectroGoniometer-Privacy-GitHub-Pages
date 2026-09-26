@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07131F" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Privacy Policy for the ElectroGoniometer Android application.">
+  <title>ElectroGoniometer Privacy Policy</title>
+  <link rel="icon" type="image/png" href="assets/electrogoniometer-icon.png">
+  <style>
+    :root {
+      --background: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-variant: #F1F5F9;
+      --primary: #0B2339;
+      --secondary: #168AA5;
+      --text: #0F172A;
+      --muted: #334155;
+      --border: #CBD5E1;
+      --border-soft: #E2E8F0;
+      --success: #16875D;
+      --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      --code-bg: #F2FAFC;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #07131F;
+        --surface: #0B1C2B;
+        --surface-variant: #13283A;
+        --primary: #81D6E5;
+        --secondary: #66C8DB;
+        --text: #F8FAFC;
+        --muted: #CBD5E1;
+        --border: #52687B;
+        --border-soft: #294155;
+        --success: #52C79B;
+        --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+        --code-bg: #123653;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--secondary);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    .shell {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 64px;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 5vw, 44px);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .app-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 25px;
+      object-fit: cover;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--surface-variant);
+      color: var(--secondary);
+      font-weight: 750;
+      font-size: 0.88rem;
+      letter-spacing: 0.015em;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+    }
+
+    h1, h2, h3 {
+      color: var(--text);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.15rem);
+      font-weight: 820;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 760px;
+    }
+
+    .meta {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .meta span {
+      background: var(--surface-variant);
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      padding: 6px 10px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .toc h2 {
+      font-size: 1rem;
+      margin: 0 0 10px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.93rem;
+    }
+
+    .toc a:hover { color: var(--secondary); }
+
+    main {
+      display: grid;
+      gap: 16px;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: clamp(20px, 4vw, 30px);
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 12px;
+    }
+
+    section h3 {
+      font-size: 1.02rem;
+      margin: 22px 0 7px;
+    }
+
+    p { margin: 0 0 12px; }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 8px 0 12px;
+      padding-left: 22px;
+    }
+
+    li { margin: 6px 0; }
+
+    .note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--surface-variant);
+      border-left: 4px solid var(--secondary);
+      color: var(--muted);
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 7px;
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--surface-variant);
+      border: 1px solid var(--border-soft);
+    }
+
+    .placeholder {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: var(--code-bg);
+      border: 1px dashed var(--secondary);
+      padding: 3px 7px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    footer {
+      color: var(--muted);
+      text-align: center;
+      padding: 28px 12px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      .app-icon { width: 92px; height: 92px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <img class="app-icon" src="assets/electrogoniometer-icon.png" alt="ElectroGoniometer app icon">
+      <div>
+        <div class="eyebrow">Privacy &amp; local storage</div>
+        <h1>ElectroGoniometer Privacy Policy</h1>
+        <p class="subtitle">
+          This policy explains how the ElectroGoniometer Android app accesses, processes, stores, exports, and deletes measurement and device data.
+        </p>
+        <div class="meta">
+          <span>Last updated: September 25, 2026</span>
+          <span>Android application</span>
+          <span>Local-first data handling</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="summary-grid" aria-label="Privacy summary">
+      <div class="summary-card">
+        <strong>No developer cloud collection</strong>
+        <p>The current app does not automatically send measurement records to a developer-controlled server.</p>
+      </div>
+      <div class="summary-card">
+        <strong>Stored on your device</strong>
+        <p>Saved measurements are kept in the app's private local database unless you choose to export them.</p>
+      </div>
+      <div class="summary-card">
+        <strong>You control export</strong>
+        <p>CSV files are saved or shared only after you initiate an export or share action.</p>
+      </div>
+    </div>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Privacy policy contents">
+        <h2>Contents</h2>
+        <a href="#scope">1. Scope</a>
+        <a href="#data">2. Data the app handles</a>
+        <a href="#use">3. How data is used</a>
+        <a href="#storage">4. Storage &amp; transmission</a>
+        <a href="#sharing">5. Export &amp; sharing</a>
+        <a href="#retention">6. Retention &amp; deletion</a>
+        <a href="#security">7. Security</a>
+        <a href="#third-parties">8. Third parties &amp; ads</a>
+        <a href="#children">9. Children's privacy</a>
+        <a href="#research">10. Research &amp; health data</a>
+        <a href="#changes">11. Changes</a>
+        <a href="#contact">12. Contact</a>
+      </nav>
+
+      <main>
+        <section id="scope">
+          <h2>1. Scope</h2>
+          <p>
+            This Privacy Policy applies to the ElectroGoniometer Android application ("ElectroGoniometer", "the app"). ElectroGoniometer is a measurement aid that uses compatible Android device motion sensors to assist with measuring and recording joint or segment angles.
+          </p>
+          <p>
+            This policy describes the app's current data practices. If the app's features or data practices change, this policy will be updated accordingly.
+          </p>
+        </section>
+
+        <section id="data">
+          <h2>2. Data the app accesses and processes</h2>
+
+          <h3>Motion and orientation sensor data</h3>
+          <p>
+            ElectroGoniometer accesses motion/orientation information available from the device, such as accelerometer or gravity-sensor readings, to calculate device orientation, movement angle, sensor stability, and out-of-plane tilt.
+          </p>
+
+          <h3>Measurement records</h3>
+          <p>When you save a measurement, the app may store:</p>
+          <ul>
+            <li>capture date and time;</li>
+            <li>collection mode;</li>
+            <li>joint, movement, body side, trial number, and phone orientation;</li>
+            <li>measured angle, signed angle, start orientation, and end orientation;</li>
+            <li>sensor stability, out-of-plane tilt, and sensor type.</li>
+          </ul>
+
+          <h3>User-entered study information</h3>
+          <p>
+            In Study Collection mode, you may enter a study identifier, participant identifier, and notes. These fields are user-controlled and may contain personal, research, or health-related information depending on what you enter.
+          </p>
+
+          <h3>Device and app information</h3>
+          <p>
+            Saved measurement records may include the device manufacturer and model, Android operating-system version, and ElectroGoniometer app version. The app also stores local preferences such as appearance, displayed precision, smoothing level, and default landscape orientation.
+          </p>
+        </section>
+
+        <section id="use">
+          <h2>3. How the data is used</h2>
+          <p>ElectroGoniometer uses the data described above to:</p>
+          <ul>
+            <li>calculate and display live range-of-motion measurements;</li>
+            <li>show measurement-quality indicators such as stability and alignment;</li>
+            <li>save measurements for later review on the device;</li>
+            <li>display summaries and trends from saved measurements;</li>
+            <li>create CSV exports when you request them; and</li>
+            <li>remember local app settings.</li>
+          </ul>
+          <p>
+            The current app does not use measurement records for advertising, profiling, or automated marketing.
+          </p>
+        </section>
+
+        <section id="storage">
+          <h2>4. Local storage and network transmission</h2>
+          <p>
+            Saved measurement records are stored in ElectroGoniometer's private on-device database. App preferences are stored locally on the device.
+          </p>
+          <p>
+            The current production source does not request Android's <strong>INTERNET</strong> permission and does not automatically transmit measurement records, study identifiers, participant identifiers, notes, or sensor measurements to a developer-controlled server.
+          </p>
+          <p>
+            ElectroGoniometer does not provide its own cloud-sync service or user account system. Android device migration or device-transfer features may handle app data according to the operating system, device manufacturer, and your device settings.
+          </p>
+        </section>
+
+        <section id="sharing">
+          <h2>5. Export and sharing</h2>
+          <p>
+            ElectroGoniometer can create CSV files containing selected saved measurements. Export is initiated by you.
+          </p>
+          <p>
+            You may save a CSV through Android's system document interface or share it through Android's system share sheet. When you choose a destination such as email, cloud storage, messaging, or another application, that destination may receive the exported data and will handle it under its own privacy practices.
+          </p>
+          <p>
+            For share-sheet exports, ElectroGoniometer uses Android's FileProvider mechanism to grant the receiving app temporary read access to the exported file.
+          </p>
+          <div class="note">
+            Exported copies are outside ElectroGoniometer's private database. Deleting data inside ElectroGoniometer does not automatically delete copies that you previously saved or shared elsewhere.
+          </div>
+        </section>
+
+        <section id="retention">
+          <h2>6. Data retention and deletion</h2>
+          <p>
+            Saved measurements remain in the app's local database until you delete them, clear the app's data, or uninstall the app, subject to Android device-transfer or system behavior described above.
+          </p>
+          <p>
+            ElectroGoniometer provides controls to delete individual measurements and a <strong>Delete all local data</strong> option in Settings.
+          </p>
+          <p>
+            Because ElectroGoniometer does not create user accounts or automatically upload saved measurements to a developer server, there is no remote account dataset for the developer to delete. Any CSV copies saved or shared outside the app must be deleted from those destinations separately.
+          </p>
+        </section>
+
+        <section id="security">
+          <h2>7. Security and data handling</h2>
+          <p>
+            ElectroGoniometer uses Android app-private storage for its local measurement database. Data exported through the share sheet is exposed using a content URI with temporary read permission rather than by making the app's private database directly accessible.
+          </p>
+          <p>
+            No method of storing data on a device can guarantee absolute security. Users handling research, clinical, or identifiable participant information should also follow their organization's device-security, consent, retention, and data-governance requirements.
+          </p>
+        </section>
+
+        <section id="third-parties">
+          <h2>8. Third-party services, analytics, and advertising</h2>
+          <p>
+            The current ElectroGoniometer build does not contain third-party advertising, analytics, social-login, or developer-operated cloud-sync functionality.
+          </p>
+          <p>
+            The app uses standard Android and AndroidX software libraries to provide its user interface and Android functionality. If you intentionally export data to another app or service, that third party's privacy policy applies to the copy you send to it.
+          </p>
+        </section>
+
+        <section id="children">
+          <h2>9. Children's privacy</h2>
+          <p>
+            ElectroGoniometer is not specifically designed for or directed toward children. The app does not knowingly operate a developer-controlled service that collects children's personal information.
+          </p>
+          <p>
+            If the app is used in research, education, clinical, or supervised settings involving minors, the responsible user or organization is responsible for obtaining any required consent and complying with applicable privacy, research, and child-protection requirements.
+          </p>
+        </section>
+
+        <section id="research">
+          <h2>10. Research and health-related information</h2>
+          <p>
+            Joint-angle measurements, participant identifiers, and notes may constitute research, health, or other sensitive information depending on how ElectroGoniometer is used and what information is entered.
+          </p>
+          <p>
+            Where appropriate, users should use de-identified participant codes instead of names or other direct identifiers and should follow the data-management requirements applicable to their study, organization, or jurisdiction.
+          </p>
+          <p>
+            ElectroGoniometer is a measurement aid and is not represented as a validated medical diagnostic device. It is not intended to diagnose, treat, cure, or prevent disease or replace professional medical judgment.
+          </p>
+        </section>
+
+        <section id="changes">
+          <h2>11. Changes to this Privacy Policy</h2>
+          <p>
+            This policy may be revised when ElectroGoniometer's functionality, data handling, legal requirements, or distribution practices change. The "Last updated" date at the top of this page identifies the current published version.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>12. Developer and privacy contact</h2>
+          <p>
+            Questions about this Privacy Policy or ElectroGoniometer's privacy practices can be sent to the developer using the contact information below.
+          </p>
+          <div class="contact-card">
+            <strong>ElectroGoniometer Developer</strong>
+            <span>Privacy contact email:</span>
+            <span class="placeholder">REPLACE_WITH_YOUR_PUBLIC_EMAIL</span>
+          </div>
+          <div class="note">
+            Before publishing this page, replace the email placeholder above with the public privacy/support email you want users and Google Play reviewers to use.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      ElectroGoniometer · Privacy Policy · © 2026
+    </footer>
+  </div>
+</body>
+</html>
